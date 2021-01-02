@@ -5,10 +5,16 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-env-variables",
+      options: {
+        allowList: ["CONTENTFUL_ACCESS_TOKEN", "CONTENTFUL_SPACE_ID"],
+      },
+    },
+    {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "fYF_NXvKdiYeXMYsr9GhLpOW1MeizwjLJvLkyOHYey8",
-        spaceId: "fs4h3yc53adm",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
     "gatsby-plugin-emotion",
