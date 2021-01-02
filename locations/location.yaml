@@ -1,0 +1,12 @@
+- meta:
+    id: 1
+  name: "San Francisco"
+  description: "This is our San Francisco location"
+- meta:
+    id: 2
+  name: "San Diego"
+  description: "This is our San Diego location"
+- meta:
+    id: 3
+  name: "Jacksonville"
+  description: "This is our Jacksonville location"

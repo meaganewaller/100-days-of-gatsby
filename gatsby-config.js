@@ -6,7 +6,7 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "CFPAT-Km-oAViu16fYaZDEBVluYEc_5iPbiJU3E8vhgOeAJiQ",
+        accessToken: "fYF_NXvKdiYeXMYsr9GhLpOW1MeizwjLJvLkyOHYey8",
         spaceId: "fs4h3yc53adm",
       },
     },
@@ -16,12 +16,33 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-transformer-yaml",
+      options: {
+        typeName: ({node}) => {
+          const name = node.sourceInstanceName
+          if (name === `locations`) {
+            return `Location`
+          }
+
+          return name
+        },
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./locations",
+        name: "locations",
+      },
+      __key: "locations",
     },
   ],
 };
