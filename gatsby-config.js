@@ -7,7 +7,7 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: {
         accessToken: "CFPAT-Km-oAViu16fYaZDEBVluYEc_5iPbiJU3E8vhgOeAJiQ",
-        spaceId: "",
+        spaceId: "fs4h3yc53adm",
       },
     },
     "gatsby-plugin-emotion",
