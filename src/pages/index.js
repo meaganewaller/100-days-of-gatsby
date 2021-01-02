@@ -1,21 +1,13 @@
 import * as React from "react"
+import Layout from '../components/layout';
 
-
-// markup
-const IndexPage = () => {
+export default () => {
   return (
-    <main>
-      <title>AUDIOC0RE</title>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/locations">Locations</a></li>
-        </ul>
-      </nav>
-      <h1>AUDIOC0RE</h1>
-    </main>
+    <>
+    <Layout>
+      <h2>AUDIOC0RE</h2>
+      <p>This is the audioc0re homepage.</p>
+    </Layout>
+    </>
   )
 }
-
-export default IndexPage

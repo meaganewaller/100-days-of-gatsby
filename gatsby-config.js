@@ -7,6 +7,7 @@ module.exports = {
   siteMetadata: {
     title: "audioc0re",
     siteUrl: "https://audioc0re13944.gtsb.io/",
+    description: "The world's best (and only) headphone sharing app",
   },
   plugins: [
     {

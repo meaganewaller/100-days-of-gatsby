@@ -1,17 +1,17 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Layout from '../../components/layout'
 
-function Location(props) {
+export default (props) => {
   const { location } = props.data
   return (
-    <main>
+    <Layout>
       <h1>{location.name}</h1>
       <p>{location.description}</p>
-    </main>
-  )
+      <Link to="/locations">&larr; back to all locations</Link>
+    </Layout>
+  );
 }
-
-export default Location
 
 export const query = graphql`
   query($id: String!) {
